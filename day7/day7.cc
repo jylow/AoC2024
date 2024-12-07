@@ -20,14 +20,6 @@ std::vector<long long> parse_line(std::string line) {
     return vec;
 }
 
-long long helper(long long a, long long b, int bit) {
-    if (bit == 0) {
-        return a + b;
-    } else {
-        return a * b;
-    }
-}
-
 long long helper2(long long a, long long b, int val) {
     if (val == 0) {
         return a + b;
