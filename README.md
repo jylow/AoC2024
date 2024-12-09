@@ -13,4 +13,5 @@ Hopefully can write better c++ code and try to use some modern cpp constructs.
 | [6](day6) | 2D Array, Simulation, Set | Tried pre-optimising and ended up taking more time to come up with a failed solution |
 | [7](day7) | Brute force               | Brute force approach to try to solve the problem. Note: try functional approach      |
 | [8](day8) | Hashing, Pair-compute     | Learned about type aliasing and to not create struct if not needed. std::pair doesnt have its own hash and structs have even less functions implemented. Need to be careful clearing containers when needed|
+| [9](day9) |                           | Part one was quite simple. Can try to do it functionally. Part 2 was a little hard. Need to make sure i interpret the qn right before solving. Code writing needs a lot of cleanup...
 
