@@ -15,3 +15,6 @@ Hopefully can write better c++ code and try to use some modern cpp constructs.
 | [8](day8) | Hashing, Pair-compute     | Learned about type aliasing and to not create struct if not needed. std::pair doesnt have its own hash and structs have even less functions implemented. Need to be careful clearing containers when needed|
 | [9](day9) |                           | Part one was quite simple. Can try to do it functionally. Part 2 was a little hard. Need to make sure i interpret the qn right before solving. Code writing needs a lot of cleanup...
 | [10](day10) |DP                       |DP Refresher. Took a while to come up with a solution with very funky DS. Can probably be solved using graph more easily for part1|
+| [10](day10) |DP                       |DP Refresher. Took a while to come up with a solution with very funky DS. Can probably be solved using graph more easily for part1|
+| [10](day10) |DP                       |DP Refresher. Took a while to come up with a solution with very funky DS. Can probably be solved using graph more easily for part1|
+| [13](day13) |Linear Algebra           |Tried to use matrix multiplication but didnt work (later found out i transposed the matrix... Brute forced failed part 2 before fixing matrix solution|
