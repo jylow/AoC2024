@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <thread>
+#include <chrono>
 #include <utility>
 #include <vector>
 #include <unordered_map>
@@ -40,6 +42,42 @@ int calculate_position(std::vector<std::pair<Position, Velocity>> &robots) {
     return ans;
 }
 
+void printgrid(std::vector<std::pair<Position, Velocity>> &robots) {
+    int count = 0;
+
+    while(true) {
+        //std::vector<std::vector<char>> grid (HEIGHT, std::vector<char>(WIDTH, '.'));
+        std::string str(WIDTH, '.');
+        std::vector<std::string> grid (HEIGHT, str);
+        count++;
+        std::cout << count << std::endl;
+
+        for (auto &robot : robots) {
+            robot.first.first += robot.second.first;
+            while (robot.first.first < 0) robot.first.first += WIDTH;
+            robot.first.first %= WIDTH;
+            robot.first.second += robot.second.second;
+            while (robot.first.second < 0) robot.first.second += HEIGHT;
+            robot.first.second %= HEIGHT;
+            //std::cout << robot.first.first << " " << robot.first.second << std::endl;
+            grid[robot.first.first][robot.first.second] = 'x';
+        }
+
+        bool toprint = false;
+        for (auto &string: grid) {
+            if (string.find("xxxxx") != std::string::npos) {
+                toprint = true;
+            }
+        }
+        if (toprint) {
+            for (auto &string: grid) {
+                std::cout << string << std::endl;
+            }
+        }
+        std::this_thread::sleep_for(std::chrono::milliseconds(20));
+    }
+}
+
 int main(void) {
     std::fstream inputstream("day14.in");
 
@@ -70,4 +108,6 @@ int main(void) {
         std::cout << part1ans << std::endl;
     }
     std::cout << part1ans << std::endl;
+
+    printgrid(robots);
 }
